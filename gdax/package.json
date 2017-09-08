@@ -1,0 +1,21 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "flow-remove-types src/ -d lib/",
+    "gdax": "yarn run build && node -c lib/* && node lib/gdacs.js",
+    "prepublish": "yarn run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gdax": "^0.4.2",
+    "npm": "^5.3.0",
+    "ramda": "^0.24.1",
+    "yql-node": "^0.2.1"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.52.0",
+    "flow-remove-types": "^1.2.1"
+  }
+}
